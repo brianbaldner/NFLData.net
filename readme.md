@@ -1,5 +1,5 @@
 ![NFL Logo](https://raw.githubusercontent.com/brianbaldner/NFL.net/master/files/nfllogo.png)
-# NFL.Net
+# NFLData.Net
 
 An API client to connect to various NFL data sources
 

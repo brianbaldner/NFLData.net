@@ -4,15 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>NFL</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>NFL.net</PackageId>
+    <PackageId>NFLData.net</PackageId>
     <Authors>Brian Baldner</Authors>
     <Company />
-    <Product>NFL.net</Product>
+    <Product>NFLData.net</Product>
     <Description>An API client to connect to various NFL data sources.</Description>
-    <PackageProjectUrl>https://github.com/brianbaldner/NFL.net</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/brianbaldner/NFLData.net</PackageProjectUrl>
     <PackageIcon>nfllogo.png</PackageIcon>
     <PackageIconUrl />
-    <RepositoryUrl>https://github.com/brianbaldner/NFL.net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/brianbaldner/NFLData.net</RepositoryUrl>
     <PackageTags>NFL, Football</PackageTags>
     <PackageReleaseNotes>First release</PackageReleaseNotes>
   </PropertyGroup>
