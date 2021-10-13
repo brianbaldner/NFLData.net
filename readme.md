@@ -1,3 +1,5 @@
+![Nuget](https://img.shields.io/nuget/v/NFLData.net) ![Nuget](https://img.shields.io/nuget/dt/NFLData.net)
+
 <img src="https://raw.githubusercontent.com/brianbaldner/NFL.net/master/files/nfllogo.png" alt="NFL Logo" width="100"/>
 
 # NFLData.Net
