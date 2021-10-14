@@ -6,6 +6,8 @@
 
 An API client to connect to various NFL data sources
 
+[View Documentation](https://github.com/brianbaldner/NFLData.net/wiki)
+
 ## Services
 * NFL.com `NFL.Com`
 * ESPN Fantasy `NFL.ESPN.Fantasy`
