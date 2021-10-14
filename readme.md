@@ -6,7 +6,7 @@
 
 An API client to connect to various NFL data sources
 
-[View Documentation](https://github.com/brianbaldner/NFLData.net/wiki)
+[View Documentation](https://github.com/brianbaldner/NFLData.net/wiki/Documentation)
 
 ## Services
 * NFL.com `NFL.Com`
