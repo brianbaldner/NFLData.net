@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace NFL.ESPN.Fantasy
 {
+    /// <summary>
+    /// Gets scoreboard info from league
+    /// </summary>
     public class Scoreboard
     {
 
@@ -417,7 +420,12 @@ namespace NFL.ESPN.Fantasy
         public List<Team> teams { get; set; }
 
 
-
+        /// <summary>
+        /// Fetches scoreboard data from ESPN Fantasy.
+        /// </summary>
+        /// <param name="leagueid">ID of league. Found in league URL. Must be viewable to the public.</param>
+        /// <param name="season">Year of season.</param>
+        /// <returns></returns>
         public static Scoreboard GetScore(string leagueid, int season)
         {
             var client = new RestClient($"https://fantasy.espn.com/apis/v3/games/ffl/seasons/{season}/segments/0/leagues/{leagueid}?view=mScoreboard");

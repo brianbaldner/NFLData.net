@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace NFL.Com
 {
+    /// <summary>
+    /// Fetches data from NFL.com about the current week and season.
+    /// </summary>
     public class CurrentData
     {
 
@@ -15,7 +18,11 @@ namespace NFL.Com
         public string dateBegin { get; set; }
         public string dateEnd { get; set; }
         public string weekType { get; set; }
-
+        /// <summary>
+        /// Fetches data from NFL.com about the current week and season.
+        /// </summary>
+        /// <param name="auth">Authentication from the Auth class</param>
+        /// <returns></returns>
         public static CurrentData GetData(Auth auth)
         {
             var client = new RestClient($"https://api.nfl.com/football/v2/weeks/date/{DateTime.Now.ToString("yyyy-MM-dd")}");

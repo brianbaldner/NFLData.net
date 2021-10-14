@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace NFL.ESPN.Fantasy
 {
+    /// <summary>
+    /// Roster data for all teams
+    /// </summary>
     public class Rosters
     {
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
@@ -162,7 +165,12 @@ namespace NFL.ESPN.Fantasy
         public Status status { get; set; }
         public List<Team> teams { get; set; }
 
-
+        /// <summary>
+        /// Gets rosters for all teams from league
+        /// </summary>
+        /// <param name="leagueid">ID of league. Found in league URL. Must be viewable to the public.</param>
+        /// <param name="season">Year of season.</param>
+        /// <returns></returns>
 
         public static Rosters GetRosters(string leagueid, int season)
         {

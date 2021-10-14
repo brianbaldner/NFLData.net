@@ -2,6 +2,9 @@
 
 namespace NFL.ESPN.Fantasy
 {
+    /// <summary>
+    /// Constant data for ESPN Fantasy
+    /// </summary>
     public class Const
     {
         /*
@@ -37,6 +40,7 @@ namespace NFL.ESPN.Fantasy
          * Maps `proTeam` numerical enum to readable team names.
          * @type {object}
          */
+        
         public static Dictionary<int, string> nflTeamIdToNFLTeam = new Dictionary<int, string>() {
             { -1, "Bye"},
 {1 , "Atlanta Falcons"},

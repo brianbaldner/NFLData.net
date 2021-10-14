@@ -29,7 +29,7 @@ namespace NflApi.Net_Test
             var auth = NFL.Com.Auth.GetAuth();
             var data = NFL.Com.CurrentData.GetData(auth);
             Console.WriteLine($"Week {data.week}");
-            var matches = NFL.Com.Week.GetWeek(auth, data.week);
+            var matches = NFL.Com.Week.GetWeek(auth, data.week, 2021);
             var fantasyteams = NFL.ESPN.Fantasy.Scoreboard.GetScore(leagueid, 2021);
             Console.WriteLine("Choose team:");
             foreach (var team in fantasyteams.teams)
@@ -84,7 +84,7 @@ namespace NflApi.Net_Test
             Dictionary<string, int> matches = new Dictionary<string, int>();
             var auth = NFL.Com.Auth.GetAuth();
             var data = NFL.Com.CurrentData.GetData(auth);
-            var week = NFL.Com.Week.GetWeek(auth, data.week);
+            var week = NFL.Com.Week.GetWeek(auth, data.week, 2021);
             foreach(var game in week.games)
             {
                 if(game.status == "Live" && !matches.ContainsKey(game.id))

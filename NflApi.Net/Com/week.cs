@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace NFL.Com
 {
+    /// <summary>
+    /// Information for the week's matches
+    /// </summary>
     public class Week
     {
         public class HomeTeam
@@ -74,9 +77,17 @@ namespace NFL.Com
 
         public List<Game> games { get; set; }
         public Pagination pagination { get; set; }
-        public static Week GetWeek(Auth auth, int week)
+        /// <summary>
+        /// Fetches match data from a week from NFL.com
+        /// </summary>
+        /// <param name="auth">Authentication from the Auth class</param>
+        /// <param name="week">Week of standings to get. Fetch from the CurrentData class.</param>
+        /// <param name="season">Year of season. Fetch from the CurrentData class.</param>
+        /// <param name="seasonType">Fetch from the CurrentData class.</param>
+        /// <returns></returns>
+        public static Week GetWeek(Auth auth, int week, int season, string seasonType = "REG")
         {
-            var client = new RestClient($"https://api.nfl.com/football/v2/games/season/2021/seasonType/REG/week/{week}?withExternalIds=true");
+            var client = new RestClient($"https://api.nfl.com/football/v2/games/season/{season}/seasonType/{seasonType}/week/{week}?withExternalIds=true");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             request.AddHeader("Authorization", $"Bearer {auth.accessToken}");

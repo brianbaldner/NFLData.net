@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NflApi.Net</name>
+    </assembly>
+    <members>
+        <member name="T:NFL.Com.Auth">
+            <summary>
+            Authentication for NFL.com API. Refresh every hour.
+            </summary>
+        </member>
+        <member name="M:NFL.Com.Auth.GetAuth">
+            <summary>
+            Creates an authentication token. Must pass through other requests.
+            </summary>
+        </member>
+        <member name="T:NFL.Com.CurrentData">
+            <summary>
+            Fetches data from NFL.com about the current week and season.
+            </summary>
+        </member>
+        <member name="M:NFL.Com.CurrentData.GetData(NFL.Com.Auth)">
+            <summary>
+            Fetches data from NFL.com about the current week and season.
+            </summary>
+            <param name="auth">Authentication from the Auth class</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.Com.Match">
+            <summary>
+            Data on a match from NFL.com
+            </summary>
+        </member>
+        <member name="M:NFL.Com.Match.GetMatch(NFL.Com.Auth,System.String)">
+            <summary>
+            Fetches data for a match from NFL.com
+            </summary>
+            <param name="auth">Authentication from the Auth class</param>
+            <param name="matchid">ID of a match. Unique to NFL.com. Fetch current matches from NFL.Com.Week class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.Com.MatchesList">
+            <summary>
+            Data for multiple matches from NFL.com. Same as Match class but for multiple matches
+            </summary>
+        </member>
+        <member name="M:NFL.Com.MatchesList.GetMatchs(NFL.Com.Auth,System.String[])">
+            <summary>
+            Fetches data for matchs from NFL.com.
+            </summary>
+            <param name="auth">Authentication from the Auth class</param>
+            <param name="matchid">IDs of matches. Unique to NFL.com. Fetch current matches from NFL.Com.Week class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.Com.Standings">
+            <summary>
+            Current NFL standings from NFL.com
+            </summary>
+        </member>
+        <member name="M:NFL.Com.Standings.GetStandings(NFL.Com.Auth,System.Int32,System.Int32,System.String)">
+            <summary>
+            Fetches current standings from NFL.com.
+            </summary>
+            <param name="auth">Authentication from the Auth class</param>
+            <param name="week">Week of standings to get. Fetch from the CurrentData class.</param>
+            <param name="season">Year of season. Fetch from the CurrentData class.</param>
+            <param name="seasonType">Fetch from the CurrentData class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.Com.Week">
+            <summary>
+            Information for the week's matches
+            </summary>
+        </member>
+        <member name="M:NFL.Com.Week.GetWeek(NFL.Com.Auth,System.Int32,System.Int32,System.String)">
+            <summary>
+            Fetches match data from a week from NFL.com
+            </summary>
+            <param name="auth">Authentication from the Auth class</param>
+            <param name="week">Week of standings to get. Fetch from the CurrentData class.</param>
+            <param name="season">Year of season. Fetch from the CurrentData class.</param>
+            <param name="seasonType">Fetch from the CurrentData class.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.ESPN.Fantasy.Const">
+            <summary>
+            Constant data for ESPN Fantasy
+            </summary>
+        </member>
+        <member name="F:NFL.ESPN.Fantasy.Const.nflTeamIdToNFLTeam">
+            Maps `proTeam` numerical enum to readable team names.
+            @type {object}
+        </member>
+        <member name="F:NFL.ESPN.Fantasy.Const.nflTeamIdToNFLTeamAbbreviation">
+            Maps `proTeam` numerical enum to readable team name abbreviations.
+            @type {object}
+        </member>
+        <member name="T:NFL.ESPN.Fantasy.Rosters">
+            <summary>
+            Roster data for all teams
+            </summary>
+        </member>
+        <member name="M:NFL.ESPN.Fantasy.Rosters.GetRosters(System.String,System.Int32)">
+            <summary>
+            Gets rosters for all teams from league
+            </summary>
+            <param name="leagueid">ID of league. Found in league URL. Must be viewable to the public.</param>
+            <param name="season">Year of season.</param>
+            <returns></returns>
+        </member>
+        <member name="T:NFL.ESPN.Fantasy.Scoreboard">
+            <summary>
+            Gets scoreboard info from league
+            </summary>
+        </member>
+        <member name="M:NFL.ESPN.Fantasy.Scoreboard.GetScore(System.String,System.Int32)">
+            <summary>
+            Fetches scoreboard data from ESPN Fantasy.
+            </summary>
+            <param name="leagueid">ID of league. Found in league URL. Must be viewable to the public.</param>
+            <param name="season">Year of season.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

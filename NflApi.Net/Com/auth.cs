@@ -4,12 +4,18 @@ using System;
 
 namespace NFL.Com
 {
+    /// <summary>
+    /// Authentication for NFL.com API. Refresh every hour.
+    /// </summary>
     public class Auth
     {
         public int expiresIn { get; set; }
         public DateTime expiration { get; set; }
         public object refreshToken { get; set; }
         public string accessToken { get; set; }
+        /// <summary>
+        /// Creates an authentication token. Must pass through other requests.
+        /// </summary>
         public static Auth GetAuth()
         {
             var client = new RestClient("https://www.nfl.com/oauth/nfl/token/client");

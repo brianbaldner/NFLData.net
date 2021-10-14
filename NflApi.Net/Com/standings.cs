@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace NFL.Com
 {
+    /// <summary>
+    /// Current NFL standings from NFL.com
+    /// </summary>
     public class Standings
     {
         public class Team
@@ -122,7 +125,14 @@ namespace NFL.Com
         public List<Week> weeks { get; set; }
         public Pagination pagination { get; set; }
 
-
+        /// <summary>
+        /// Fetches current standings from NFL.com.
+        /// </summary>
+        /// <param name="auth">Authentication from the Auth class</param>
+        /// <param name="week">Week of standings to get. Fetch from the CurrentData class.</param>
+        /// <param name="season">Year of season. Fetch from the CurrentData class.</param>
+        /// <param name="seasonType">Fetch from the CurrentData class.</param>
+        /// <returns></returns>
         public static Standings GetStandings(Auth auth, int week, int season, string seasonType = "REG")
         {
             var client = new RestClient($"https://api.nfl.com/football/v2/standings?seasonType={seasonType}&week={week}&season={season}");
